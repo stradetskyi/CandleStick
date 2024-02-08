@@ -1,0 +1,16 @@
+@CandleStick.Server_HostAddress = http://localhost:5221/api
+
+GET {{CandleStick.Server_HostAddress}}/candlestick/get-initial-data
+Accept: application/json
+
+###
+
+GET {{CandleStick.Server_HostAddress}}/candlestick/get-full-data-tree
+Accept: application/json
+
+###
+
+GET {{CandleStick.Server_HostAddress}}/candlestick/get-tree-view
+Accept: application/json
+
+###

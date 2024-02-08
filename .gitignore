@@ -1,0 +1,7 @@
+/.vs
+/candlestick.client/.vscode
+/candlestick.client/package-lock.json
+/candlestick.client/.angular
+/CandleStick.Server/bin
+/CandleStick.Server/obj
+/candlestick.client/obj

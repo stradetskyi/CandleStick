@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 id="tableLabel">Candle Stick Tree View</h1>
+
+  <p *ngIf="!data"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+  <table class="table" *ngIf="data">
+    <thead>
+      <tr>
+        <th scope="col">Time range</th>
+        <th scope="col">Open</th>
+        <th scope="col">Close</th>
+        <th scope="col">High</th>
+        <th scope="col">Low</th>
+        <th scope="col">Sum Volume</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data" [ngClass]="getClasses(item)" scope="row">
+        <td>{{ item.timeRange | date : "YYYY-MM-dd hh:mm" }}</td>
+        <td>{{ item.open | number : '0.5' }}</td>
+        <td>{{ item.close | number : '0.5' }}</td>
+        <td>{{ item.high | number : '0.5' }}</td>
+        <td>{{ item.low | number : '0.5' }}</td>
+        <td>{{ item.sumVolume | number }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
